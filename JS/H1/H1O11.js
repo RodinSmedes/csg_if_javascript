@@ -1,4 +1,5 @@
 var horizontaalA = 120;
+var horizontaalB = 500;
 var verticaal = 170;
 
 function setup() {
