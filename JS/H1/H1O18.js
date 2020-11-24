@@ -11,8 +11,11 @@ function setup() {
 }
 
 function draw() {
-  background(0,0,75,1);
+  background(0,0,75,0.1);
   tekenSter(xPositie,yPositie);
+  yPositie += 1;
+  xPositie += 5;
+  scale += 0.05;
 }
 
 function tekenSter(x,y) {
