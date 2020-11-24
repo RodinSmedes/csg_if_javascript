@@ -1,5 +1,6 @@
 var xJOS = 225;
 var yJOS = 375;
+var snelheidJOS = 17;
 
 function setup() {
   canvas = createCanvas(450,450);
@@ -12,7 +13,7 @@ function setup() {
 function draw() {
   background('lavender');
   fill('black');
-  // yJOS--;
+  yJOS-=snelheidJOS;
 
   xJOS=constrain(xJOS,75,width-75);
   yJOS=constrain(yJOS,75,height-75);
