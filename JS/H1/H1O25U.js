@@ -26,7 +26,8 @@ function draw() {
   xPositie += xSnelheid;
   yPositie += ySnelheid;
   fill(255,255,255,1);
-  ellipse(xPositie,yPositie,2*straal);  
+  ellipse(xPositie,yPositie,2*straal);
+    
   onderlingeAfstand=round(dist(550,height - straal,xPositie,yPositie)) - 2*straal;
   if (onderlingeAfstand <= 0) {
     eindScherm();

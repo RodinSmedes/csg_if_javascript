@@ -11,7 +11,7 @@ function setup() {
   noStroke();
   frameRate(50);
 }
-// DEZE DOET HET NIET, VRAGEN IN VOLGENDE LES!!!!
+
 function draw() {
   background('olive');
   if (keyIsDown(LEFT_ARROW)) {
@@ -33,10 +33,10 @@ function draw() {
     xProoi += 5;
   }
   if (keyIsDown(87)) {
-    yProoi += 5;
+    yProoi -= 5;
   }
   if (keyIsDown(83)) {
-    yProoi -= 5;
+    yProoi += 5;
   }
 
   xJager = constrain(xJager,0,width - 100);
@@ -44,15 +44,22 @@ function draw() {
   xProoi = constrain(xProoi,0,width - 75);
   yProoi = constrain(yProoi,0,height - 50);
 
-  if (xJager >= 700 && xJager <= 875 && yJager >= 75 && yJager <= 225) {
-    fill('chartreuse');
+  /*if (xJager >= xProoi - 75 && xJager <= xProoi + 75 && yJager >= yProoi - 50 && yJager <= yProoi + 50) {
+    eindScherm();
+  }
+  else {
+    fill('darkkhaki');
+  } */
+  rect(xProoi,yProoi,75,50);
+  fill('moccasin');
+  rect(xJager,yJager,100,100);   
+
+  if (xJager >= xProoi - 75 && xJager <= xProoi + 75 && yJager >= yProoi - 50 && yJager <= yProoi + 50) {
+    eindScherm();
   }
   else {
     fill('darkkhaki');
   }
-  rect(800,175,75,50);
-  fill('moccasin');
-  rect(xJager,yJager,100,100);   
 }
 
 function eindScherm() {

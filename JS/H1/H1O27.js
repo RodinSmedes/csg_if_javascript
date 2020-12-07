@@ -1,5 +1,5 @@
 var aantal = 4;
-var breedte;
+var breedte = 1000 / aantal;
 
 function setup() {
   canvas = createCanvas(1000,300);
